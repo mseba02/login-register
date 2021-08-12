@@ -1,0 +1,281 @@
+/* import roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* global classes and resets*/
+.position-relative {
+  position: relative;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #E8E9FC;
+  padding: 24px 15px 8px 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  display: block;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+  margin: 0 auto 20px;
+}
+
+body {
+  background: url(./images/meteowrite-bk-img.svg) center no-repeat #F2F3FA;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #131BA3;
+  text-decoration: none;
+  border-bottom: 1px solid #E8E9FC;
+  padding-bottom: 3px;
+  font-weight: 300;
+}
+
+/* button */
+button {
+  transition: all 0.3s ease;
+  background: #FFB550;
+  margin-top: 35px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+button:hover {
+  background: #e9aa53;
+}
+
+button a {
+  color: #fff;
+  padding: 0;
+  border-bottom: 0;
+}
+
+/* custom css begin */
+.App {
+  text-align: center;
+  width: 440px;
+  padding: 50px 70px;
+  margin: 100px auto;
+  background: #fff;
+}
+
+.error {
+  margin-top: -3px;
+  margin-bottom: 13px;
+  font-size: 12px;
+  color: #bd4f4f;
+}
+
+input[value=""] + label {
+  top: 20px;
+}
+
+/* floating inputs names */
+.inputsForm__all:focus + label {
+  top: 9px;
+}
+
+.inputsForm__label {
+  transition: all 0.3s ease;
+  position: absolute;
+  font-size: 11px;
+  color: #131BA3;
+  left: 16px;
+  top: 9px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* terms */
+.termsForm__label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 42px;
+  font-size: 12px;
+  color: #131BA3;
+  margin-right: 20px;
+  height: 32px;
+  line-height: 22px;
+  border: 1px solid #E8E9FC;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: border 0.3s ease;
+}
+
+.termsForm__input:checked + label {
+  text-indent: 0;
+}
+
+.termsForm__label:hover {
+  border-color: #131BA3;
+}
+
+.termsForm__agree {
+  color: #1A1A1A;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* header text */
+.headers-text {
+  margin-bottom: 70px;
+}
+
+.headers-text__title {
+  font-size: 24px;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.inputsForm__login {
+  color: #1A1A1A;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+.headers-text__placeholder {
+  font-size: 12px;
+  margin-top: -10px;
+  letter-spacing: 0.4px;
+  color: #1A1A1A;
+}
+
+.headers-text__mail {
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: -10px;
+  letter-spacing: 0.4px;
+  color: #1A1A1A;
+}
+
+.headers-text__svgMail {
+  margin-top: 10px;
+}
+
+.inputsForm__login-a {
+  color: #131BA3;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.activate__p{
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* loader */
+.loader {
+  display: none;
+  font-size: 80px;
+  color: red;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.94);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.loader__active {
+  display: block;
+}
+
+.lds-ripple {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30px;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #131BA3;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+/* keyframes animation */
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+
+}
